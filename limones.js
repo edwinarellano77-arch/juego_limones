@@ -5,11 +5,17 @@ let ctx=canvas.getContext("2d");
 const ALTURA_SUELO=20;
 const ALTURA_PERSONAJE=60;
 const ANCHO_PERSONAJE=40;
+const ANCHO_LIMON=20;
+const ALTURA_LIMON=20;
 let personajeX=canvas.width/2
+let limonX=canvas.width/2;
+let limonY=5;
+
 // INICIA JUEGO
 function iniciar(){
     dibujarSuelo();
     dibujarPersonaje();
+    dibujarLimon();
 }
 
 //DIBUJAR SUELO
@@ -42,4 +48,16 @@ function actualizarPantalla(){
     limpiarCanva();
     dibujarSuelo();
     dibujarPersonaje();
+    dibujarLimon();
+}
+
+// LIMONES
+function dibujarLimon(){
+    ctx.fillStyle="green";
+    ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
+}
+function bajarLimon(){
+    limonY=limonY+15;
+    actualizarPantalla();
+
 }
