@@ -38,7 +38,7 @@ function dibujarSuelo(){
 
 // DIBUJAR PERSONAJE
 function dibujarPersonaje(){
-   ctx.fillStyle="yellow";
+   ctx.fillStyle="#92400e";
     ctx.fillRect(personajeX,personajeY,40,ALTURA_PERSONAJE);
 }
 
@@ -67,7 +67,7 @@ function actualizarPantalla(){
 
 // LIMONES
 function dibujarLimon(){
-    ctx.fillStyle="green";
+    ctx.fillStyle="#bef264";
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
 }
 function bajarLimon(){
